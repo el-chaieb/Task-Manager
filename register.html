@@ -11,7 +11,7 @@
     <div class="background"></div>
         <div class="login-box">
             <h2>Ready to make an account?</h2>
-            <form id="registerForm" action="main.html" method="GET">
+            <form id="registerForm">
 
                 <div class="input-box">
                     <input type="text" id="name" name="name" required>
@@ -43,10 +43,18 @@
             </p>
 
         <script src="register.js"></script>
+        <script>
+            document.getElementById("registerForm").addEventListener("submit", function(e){
+            e.preventDefault(); 
+            window.location.href = "main.html";
+        });
+
+        </script>
 
     
 </body>
 </html>
+
 
 
 
