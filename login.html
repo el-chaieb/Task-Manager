@@ -12,7 +12,7 @@
 
 <div class="login-box">
     <h2>Login</h2>
-    <form id="loginForm" action="main.html" method="POST">
+    <form id="loginForm">
 
         <div class="input-box">
             <input type="text" id="username" name="username" required>
@@ -38,7 +38,14 @@
     </form>
 </div>
 <script src="login.js"></script>
+        <script>
+            document.getElementById("loginForm").addEventListener("submit", function(e){
+            e.preventDefault(); 
+            window.location.href = "main.html";
+        });
+        </script>
 
 </body>
 </html>
+
 
