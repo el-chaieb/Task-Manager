@@ -20,5 +20,10 @@ document.addEventListener("DOMContentLoaded", () => {
             e.preventDefault();
             return;
         }
+            document.getElementById("loginForm").addEventListener("submit", function(e){
+            e.preventDefault(); 
+            window.location.href = "main.html";
+        });
     });
 });
+
