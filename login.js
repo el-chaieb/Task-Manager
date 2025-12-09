@@ -6,28 +6,22 @@ document.addEventListener("DOMContentLoaded", () => {
 
     form.addEventListener("submit", function (e) {
 
+        e.preventDefault();
+
         const username = usernameInput.value.trim();
         const password = passwordInput.value.trim();
         const nameRegex = /^[A-Za-z]+$/;
 
         if (!nameRegex.test(username)) {
             alert("Username must contain alphabetic letters only.");
-            e.preventDefault();
             return;
         }
+
         if (password.length < 6) {
             alert("Password must be at least 6 characters.");
-            e.preventDefault();
             return;
         }
-        if(nameRegex.test(username) && password.length < 6){
-            document.getElementById("loginForm").addEventListener("submit", function(e){
-            e.preventDefault(); 
-            window.location.href = "main.html";
-        });
-        }
 
+        window.location.href = "main.html";
     });
 });
-
-
