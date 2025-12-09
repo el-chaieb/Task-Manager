@@ -1,0 +1,38 @@
+body {
+    background-color: #1c1f24;
+    color: #ddd;
+}
+
+#sidebar {
+    width: 250px;
+    min-height: 100vh;
+    transition: 0.3s ease;
+}
+
+#sidebar .nav-link {
+    color: #ccc;
+}
+iframe{
+    border-radius: 10px;
+}
+
+#sidebar .nav-link:hover {
+    color: #fff;
+    background: #343a40;
+    border-radius: 5px;
+}
+
+@media (max-width: 995px) {
+    #sidebar {
+        margin-left: -250px;
+    }
+    #sidebar.show {
+        margin-left: 0;
+    }
+}
+#logo{
+    height: 40px;
+    width: 40px;
+    border-radius: 5px;
+    margin-left:10px;
+}

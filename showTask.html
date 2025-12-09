@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Show Tasks</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-dark p-3 text-light">
+
+<h3>Recent Tasks</h3>
+<div class="table-responsive">
+    <table class="table table-dark table-striped table-bordered align-middle">
+        <thead class="table-dark">
+            <tr>
+                <th>ID</th>
+                <th>Task Name</th>
+                <th>Status</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody id="tasksBody">
+            <tr>
+                <td>1</td>
+                <td>Study JavaScript</td>
+                <td><span class="badge bg-success text-dark">Done</span></td>
+                <td>
+                    <button class="btn btn-sm btn-info">Edit</button>
+                    <button class="btn btn-sm btn-danger">Delete</button>
+                    <button class="btn btn-sm btn-warning toggle-status">Mark Pending</button>
+                </td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Go Gym</td>
+                <td><span class="badge bg-success text-dark">Done</span></td>
+                <td>
+                    <button class="btn btn-sm btn-info">Edit</button>
+                    <button class="btn btn-sm btn-danger">Delete</button>
+                    <button class="btn btn-sm btn-warning toggle-status">Mark Pending</button>
+                </td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Shopping</td>
+                <td><span class="badge bg-warning text-dark">Pending</span></td>
+                <td>
+                    <button class="btn btn-sm btn-info">Edit</button>
+                    <button class="btn btn-sm btn-danger">Delete</button>
+                    <button class="btn btn-sm btn-warning toggle-status">Mark Done</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<script>
+function attachToggleEvents() {
+    const buttons = document.querySelectorAll(".toggle-status");
+    buttons.forEach(button => {
+        button.onclick = () => {
+            const row = button.closest("tr");
+            const badge = row.querySelector("td:nth-child(3) span");
+
+            if (badge.classList.contains("bg-warning")) {
+                badge.classList.remove("bg-warning");
+                badge.classList.add("bg-success");
+                badge.innerText = "Done";
+                button.innerText = "Mark Pending";
+            } else {
+                badge.classList.remove("bg-success");
+                badge.classList.add("bg-warning");
+                badge.innerText = "Pending";
+                button.innerText = "Mark Done";
+            }
+        }
+    });
+}
+attachToggleEvents();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,135 @@
+body {
+    background: #121212;
+    color: #e0e0e0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+}
+
+header {
+    padding: 20px 50px;
+    background: #1f1f1f;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header h2 {
+    color: #4fc3f7; /* light blue accent */
+    font-weight: 700;
+    font-size: 1.8rem;
+}
+
+header a {
+    color: #4fc3f7;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 15px;
+    transition: color 0.3s ease;
+}
+
+header a:hover {
+    color: #0288d1; /* darker blue on hover */
+}
+
+main {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+main h1 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: #81d4fa;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+main p {
+    font-size: 1.1rem;
+    color: #b0bec5;
+    line-height: 1.8;
+    max-width: 700px;
+    margin: 0 auto 30px;
+}
+
+main a {
+    display: inline-block;
+    padding: 12px 30px;
+    background: linear-gradient(135deg, #4fc3f7, #0288d1);
+    color: #fff;
+    font-weight: 600;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 6px 15px rgba(79, 195, 247, 0.4);
+}
+
+main a:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(79, 195, 247, 0.6);
+}
+
+.container {
+    margin-top: 60px;
+}
+
+.card {
+    background: #1f1f1f;
+    border-radius: 20px;
+    padding: 30px 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.7);
+}
+
+.card-body {
+    text-align: center;
+}
+
+.card-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #4fc3f7;
+    margin-bottom: 15px;
+}
+
+.card-text {
+    font-size: 1rem;
+    color: #cfd8dc;
+}
+
+.display-4 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+@media (max-width: 768px) {
+    main h1 {
+        font-size: 2rem;
+    }
+    .display-4 {
+        font-size: 2.5rem;
+    }
+    header {
+        padding: 20px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    header .mt-2 {
+        margin-top: 10px;
+    }
+}
+#logo{
+    height: 40px;
+    width: 40px;
+    border-radius: 5px;
+    margin-left:10px;
+}
